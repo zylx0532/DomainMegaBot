@@ -85,7 +85,7 @@ int DomainMegaBot(char *domain , char * NoMatchPattern, char * WhoisQueryServer,
     do {
         whois_query(WhoisQueryServer, domain, &response);
         if (response) break;
-        sleep(1);
+        sleep(3);
     }
     while(1);
 	if (strstr(response,NoMatchPattern)!=NULL) {
